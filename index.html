@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Club Leaderboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="max-points">
+    Max points: 
+    <input type="number" class="js-max-points">
+    <button onclick="
+    setMaxPoints()
+    ">
+        Set as Max
+    </button>
+</div>
+    <div class="wrapper">
+        <div class="lboard_section">
+            <div class="lboard_title">
+                <div class="title">
+                    Chess Club Leaderboard
+                    <div class="max-points-position"></div>
+                </div>
+            </div>
+
+            <div class="lboard_wrap">
+                <div class="lboard_item">
+                    <div class="js-div"></div>
+                    <div class="add">
+                        <input placeholder="Member Name" class="member-input">
+                        <input placeholder="Number of Points" type="number" class="points-member-input">
+                        <button onclick="
+                          addMember()
+                        "> &#43;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
