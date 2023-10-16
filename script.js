@@ -13,7 +13,7 @@ function addMember() {
                             <div class="name_bar">
                                 <p><span>${i + 1}. </span>${members[i]}</p>
                                 <div class="bar_wrap">
-                                    <div class="inner_bar" style="width: ${(numberOfPoints / max) * 100}"></div>
+                                    <div class="inner_bar" style="width: ${(numberOfPoints / max) * 100}%"></div>
                                 </div>
                             </div>
                             <div class="points">
@@ -23,7 +23,6 @@ function addMember() {
         `;
         todoListHTML += html
         document.querySelector('.js-div').innerHTML = todoListHTML;
-        console.log(html);
     }
     members.push(memberName);
 }
