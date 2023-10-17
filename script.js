@@ -5,6 +5,7 @@ const members = [];
 function addMember() {
     let inputElement = document.querySelector('.member-input');
     let memberName = inputElement.value;
+        members.push(memberName);
     let pointsInputElement = document.querySelector('.points-member-input');
     let numberOfPoints = pointsInputElement.value;
     for (let i = 0; i <= members.length; i++) {
@@ -23,11 +24,9 @@ function addMember() {
                         </div>
         `;
         todoListHTML += html
-        document.querySelector('.js-div').innerHTML = todoListHTML;
     }
-    members.push(memberName);
+            document.querySelector('.js-div').innerHTML = todoListHTML;
 }
-
 function setMaxPoints() {
     let decidedMax = document.querySelector('.js-max-points');
     let max = decidedMax.value;
