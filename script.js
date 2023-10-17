@@ -1,8 +1,8 @@
-const members = [];
 
-    let todoListHTML = ``;
 
 function addMember() {
+    let members = [];
+        let todoListHTML = ``;
     let inputElement = document.querySelector('.member-input');
     let memberName = inputElement.value;
         members.push(memberName);
@@ -27,6 +27,8 @@ function addMember() {
     }
             document.querySelector('.js-div').innerHTML = todoListHTML;
 }
+
+
 function setMaxPoints() {
     let decidedMax = document.querySelector('.js-max-points');
     let max = decidedMax.value;
