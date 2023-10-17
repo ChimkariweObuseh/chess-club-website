@@ -43,6 +43,6 @@ function addMember() {
 function setMaxPoints() {
     let decidedMax = document.querySelector('.js-max-points');
     let maximum = decidedMax.value;
-    let maxhtml = `<p>Max Points: ${max}</p>`;
+    let maxhtml = `<p>Max Points: ${maximum}</p>`;
     document.querySelector('.max-points-position').innerHTML = maxhtml;
 }
