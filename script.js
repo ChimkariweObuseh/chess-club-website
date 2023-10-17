@@ -1,8 +1,19 @@
 
 
 function addMember() {
-    let members = [];
-        let todoListHTML = ``;
+    const members = [];
+    let todoListHTML = `
+    <div class="lboard_mem">
+                            <div class="name_bar">
+                                <p><span>1. </span>Chimkariwe Obuseh</p>
+                                <div class="bar_wrap">
+                                    <div class="inner_bar" style="width: ${(numberOfPoints / max) * 100}%"></div>
+                                </div>
+                            </div>
+                            <div class="points">
+                                ${numberOfPoints} points
+                            </div>
+                        </div>`;
     let inputElement = document.querySelector('.member-input');
     let memberName = inputElement.value;
         members.push(memberName);
@@ -24,8 +35,8 @@ function addMember() {
                         </div>
         `;
         todoListHTML += html
+        document.querySelector('.js-div').innerHTML = todoListHTML;
     }
-            document.querySelector('.js-div').innerHTML = todoListHTML;
 }
 
 
