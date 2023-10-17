@@ -17,10 +17,10 @@ function addMember() {
     let inputElement = document.querySelector('.member-input');
     let memberName = inputElement.value;
         members.push(memberName);
-    let pointsInputElement = document.querySelector('.points-member-input');
-    let numberOfPoints = pointsInputElement.value;
     for (let i = 0; i <= members.length; i++) {
         let membersIndex = members[i];
+    let pointsInputElement = document.querySelector('.points-member-input');
+    let numberOfPoints = pointsInputElement.value;
         let html = `
         <div class="lboard_mem">
                             <div class="name_bar">
