@@ -126,3 +126,11 @@ body{
     margin: 100px auto 0;
     justify-content: center;
 }
+
+.js-max-points,
+.max-points {
+    padding: 5px;
+    background: transparent;
+    border-style: solid;
+    border-weight: 5px;
+}
