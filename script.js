@@ -26,7 +26,7 @@ function addMember() {
                             <div class="name_bar">
                                 <p><span>${i + 1}. </span>${memberName}</p>
                                 <div class="bar_wrap">
-                                    <div class="inner_bar" style="width: ${(numberOfPoints / max) * 100}%"></div>
+                                    <div class="inner_bar" style="width: ${(numberOfPoints / maximum) * 100}%"></div>
                                 </div>
                             </div>
                             <div class="points">
@@ -42,7 +42,7 @@ function addMember() {
 
 function setMaxPoints() {
     let decidedMax = document.querySelector('.js-max-points');
-    let max = decidedMax.value;
+    let maximum = decidedMax.value;
     let maxhtml = `<p>Max Points: ${max}</p>`;
     document.querySelector('.max-points-position').innerHTML = maxhtml;
 }
