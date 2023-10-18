@@ -2,7 +2,7 @@
     let maximum = decidedMax.value;
 
 function addMember() {
-    const members = [];
+    let members = [];
     let todoListHTML = `
     <div class="lboard_mem">
                             <div class="name_bar">
