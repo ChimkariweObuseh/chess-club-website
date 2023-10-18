@@ -12,7 +12,7 @@ renderLeaderboard();
 function renderLeaderboard() {
     let todoListHTML = '';
     for (let i = 0; i <= members.length; i++) {
-    let membersIndex = members[i];
+    const membersIndex = members[i];
     const name = membersIndex.name;
     const points = membersIndex.points;
         
