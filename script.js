@@ -19,7 +19,7 @@ function renderLeaderboard() {
         let html = `
         <div class="lboard_mem">
                             <div class="name_bar">
-                                <p><span>${i + 1}. </span>${members[i].name}</p>
+                                <p><span>${i + 1}. </span>${name}</p>
                                 <div class="bar_wrap">
                                     <div class="inner_bar" style="width: ${(points / 56) * 100}%"></div>
                                 </div>
@@ -35,7 +35,7 @@ function renderLeaderboard() {
                             </div>
                         </div>
         `;
-        todoListHTML += html
+        todoListHTML += html;
     }
         document.querySelector('.js-div').innerHTML = todoListHTML;
     }
