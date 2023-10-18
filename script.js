@@ -12,14 +12,14 @@ renderLeaderboard();
 function renderLeaderboard() {
     let todoListHTML = '';
     for (let i = 0; i <= members.length; i++) {
-        let membersIndex = members[i];
+    let membersIndex = members[i];
     const name = membersIndex.name;
     const points = membersIndex.points;
         
         let html = `
         <div class="lboard_mem">
                             <div class="name_bar">
-                                <p><span>${i + 1}. </span>${membersIndex.name}</p>
+                                <p><span>${i + 1}. </span>${members[i].name}</p>
                                 <div class="bar_wrap">
                                     <div class="inner_bar" style="width: ${(points / 56) * 100}%"></div>
                                 </div>
