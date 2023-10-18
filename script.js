@@ -2,7 +2,6 @@
 
 function addMember() {
     const members = [];
-    members.push(memberName);
     let todoListHTML = `
     <div class="lboard_mem">
                             <div class="name_bar">
@@ -22,6 +21,8 @@ function addMember() {
     let numberOfPoints = pointsInputElement.value;
     let inputElement = document.querySelector('.member-input');
     let memberName = inputElement.value;
+    members.push(memberName);
+
 
 
         let html = `
