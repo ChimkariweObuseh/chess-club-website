@@ -1,3 +1,12 @@
+    let members = [{
+        name: 'Chimka',
+        points: '30'
+    }, {
+        name: 'Ryan',
+        points: '18'
+    }];
+
+renderLeaderboard();
 
 function setMaxPoints() {
     let decidedMax = document.querySelector('.js-max-points');
@@ -7,46 +16,51 @@ function setMaxPoints() {
     console.log(maximum);
 }
 
-    let members = [];
-    let todoListHTML = `
-    <div class="lboard_mem">
-                            <div class="name_bar">
-                                <p><span>1. </span>Chimkariwe Obuseh</p>
-                                <div class="bar_wrap">
-                                    <div class="inner_bar" style="width: 60%"></div>
-                                </div>
-                            </div>
-                            <div class="points">
-                                60 points
-                            </div>
-                        </div>`;
 
-function addMember() {
+function renderLeaderboard() {
+    let todoListHTML = '';
     for (let i = 0; i <= members.length; i++) {
         let membersIndex = members[i];
+        const { name, points } = membersIndex;
+       // const points = membersIndex.points;
         
-    let pointsInputElement = document.querySelector('.points-member-input');
-    let numberOfPoints = pointsInputElement.value;
-    let inputElement = document.querySelector('.member-input');
-    let memberName = inputElement.value;
-    members.push(memberName);
-
-
-
         let html = `
         <div class="lboard_mem">
                             <div class="name_bar">
-                                <p><span>${i + 1}. </span>${memberName}</p>
+                                <p><span>${i + 1}. </span>${name}</p>
                                 <div class="bar_wrap">
-                                    <div class="inner_bar" style="width: ${(numberOfPoints / 40) * 100}%"></div>
+                                    <div class="inner_bar" style="width: ${(points / 40) * 100}%"></div>
                                 </div>
                             </div>
                             <div class="points">
-                                ${numberOfPoints} points
+                                ${points} points
+                                <button onclick="
+                                members.splice(${i}, 1);
+                                addMember();
+                                ">
+                                DELETE
+                                </button>
                             </div>
                         </div>
         `;
         todoListHTML += html
+    }
         document.querySelector('.js-div').innerHTML = todoListHTML;
     }
+
+    
+function addMember() {
+    let pointsInputElement = document.querySelector('.points-member-input');
+    let numberOfPoints = pointsInputElement.value;
+    let inputElement = document.querySelector('.member-input');
+    let memberName = inputElement.value;
+    members.push({
+        name: memberName,
+        points: numberOfPoints
+    });
+
+    inputElement.value = '';
+    pointsInputElement.value = '';
+    renderLeaderboard();
+
 }
