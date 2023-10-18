@@ -8,32 +8,24 @@
 
 renderLeaderboard();
 
-function setMaxPoints() {
-    let decidedMax = document.querySelector('.js-max-points');
-    let maximum = decidedMax.value; 
-    let maxhtml = `<p>Max Points: ${maximum}</p>`;
-    document.querySelector('.max-points-position').innerHTML = maxhtml;
-    console.log(maximum);
-}
-
 
 function renderLeaderboard() {
     let todoListHTML = '';
     for (let i = 0; i <= members.length; i++) {
         let membersIndex = members[i];
-        const { name, points } = membersIndex;
-       // const points = membersIndex.points;
+    const name = membersIndex.name;
+    const points = membersIndex.points;
         
         let html = `
         <div class="lboard_mem">
                             <div class="name_bar">
                                 <p><span>${i + 1}. </span>${name}</p>
                                 <div class="bar_wrap">
-                                    <div class="inner_bar" style="width: ${(points / 40) * 100}%"></div>
+                                    <div class="inner_bar" style="width: ${(points / 56) * 100}%"></div>
                                 </div>
                             </div>
                             <div class="points">
-                                ${points} points
+                                56 points
                                 <button onclick="
                                 members.splice(${i}, 1);
                                 addMember();
