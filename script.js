@@ -1,13 +1,11 @@
-function setMaxPoints() {
     let decidedMax = document.querySelector('.js-max-points');
     let maximum = decidedMax.value;
 
+function setMaxPoints() {
     let maxhtml = `<p>Max Points: ${maximum}</p>`;
     document.querySelector('.max-points-position').innerHTML = maxhtml;
 }
 
-
-function addMember() {
     let members = [];
     let todoListHTML = `
     <div class="lboard_mem">
@@ -21,6 +19,8 @@ function addMember() {
                                 60 points
                             </div>
                         </div>`;
+
+function addMember() {
     for (let i = 0; i <= members.length; i++) {
         let membersIndex = members[i];
         
