@@ -38,7 +38,7 @@ function addMember() {
                             <div class="name_bar">
                                 <p><span>${i + 1}. </span>${memberName}</p>
                                 <div class="bar_wrap">
-                                    <div class="inner_bar" style="width: ${(numberOfPoints / maximum) * 100}%"></div>
+                                    <div class="inner_bar" style="width: ${(numberOfPoints / 40) * 100}%"></div>
                                 </div>
                             </div>
                             <div class="points">
