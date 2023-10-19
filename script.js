@@ -25,18 +25,14 @@ function renderLeaderboard() {
                                     <div class="inner_bar" style="width: ${(points / 56) * 100}%"></div>
                                 </div>
                             </div>
-                            <div id="plswork" class="points">
-                                <button onclick="
-                                changeClass();
-                                ">
-                                ${points} points
-                                </button>                                
-                                <div class="nodropdown">
-                                <p onclick="
-                                addPoints(5);
-                                "> Defeated Weekly Chess Bot (+5)</p>
-                                </div>
-                                <button onclick="
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div>                                <button onclick="
                                 members.splice(${i}, 1);
                                 renderLeaderboard();
                                 ">
