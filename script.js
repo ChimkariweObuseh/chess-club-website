@@ -29,8 +29,7 @@ function renderLeaderboard() {
                                 ${points} points
                                 <div class="dropdown-content">
                                 <p onclick="
-                                points += 5;
-                                renderLeaderboard();
+                                addPoints(5);
                                 "> Defeated Weekly Chess Bot (+5)</p>
                                 </div>
                                 <button onclick="
@@ -63,4 +62,9 @@ function addMember() {
     pointsInputElement.value = '';
     renderLeaderboard();
 
+}
+
+function addPoints(num) {
+    points += num;
+    renderLeaderboard();
 }
