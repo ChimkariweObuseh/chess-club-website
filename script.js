@@ -26,7 +26,7 @@ function renderLeaderboard() {
                                 </div>
                             </div>
                             <div class="points">
-                                56 points
+                                ${points} points
                                 <button onclick="
                                 members.splice(${i}, 1);
                                 addMember();
