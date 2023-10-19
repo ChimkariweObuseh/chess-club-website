@@ -30,7 +30,7 @@ function renderLeaderboard() {
                                 <button onclick="
                                 members.splice(${i}, 1);
                                 todoListHTML -= html;
-                                addMember();
+                                renderLeaderboard();
                                 ">
                                 DELETE
                                 </button>
