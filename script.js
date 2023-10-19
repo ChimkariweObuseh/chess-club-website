@@ -25,8 +25,14 @@ function renderLeaderboard() {
                                     <div class="inner_bar" style="width: ${(points / 56) * 100}%"></div>
                                 </div>
                             </div>
-                            <div class="points">
+                            <div class="points dropdown">
                                 ${points} points
+                                <div class="dropdown-content">
+                                <button onclick="
+                                points += 5;
+                                renderLeaderboard();
+                                "> Defeated Weekly Chess Bot (+5)</button>
+                                </div>
                                 <button onclick="
                                 members.splice(${i}, 1);
                                 renderLeaderboard();
