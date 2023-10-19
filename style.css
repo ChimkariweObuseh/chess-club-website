@@ -136,7 +136,7 @@ body{
   z-index: 1;
 }
 
-.dropdown:hover .dropdown-content {
+.points:hover .dropdown-content {
   display: block;
 }
 
