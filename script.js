@@ -25,10 +25,12 @@ function renderLeaderboard() {
                                     <div class="inner_bar" style="width: ${(points / 56) * 100}%"></div>
                                 </div>
                             </div>
-                            <div id="plswork" class="points" onclick="
-                            changeClass();
-                            ">
+                            <div id="plswork" class="points">
+                                <button onclick="
+                                changeClass();
+                                ">
                                 ${points} points
+                                </button>                                
                                 <div class="nodropdown">
                                 <p onclick="
                                 addPoints(5);
