@@ -25,11 +25,11 @@ function renderLeaderboard() {
                                     <div class="inner_bar" style="width: ${(points / 56) * 100}%"></div>
                                 </div>
                             </div>
-                            <div id="plswork" class="points nodropdown" onclick="
+                            <div id="plswork" class="points" onclick="
                             changeClass();
                             ">
                                 ${points} points
-                                <div class="dropdown-content">
+                                <div class="nodropdown">
                                 <p onclick="
                                 addPoints(5);
                                 "> Defeated Weekly Chess Bot (+5)</p>
