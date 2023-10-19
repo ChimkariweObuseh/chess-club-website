@@ -15,7 +15,7 @@ function renderLeaderboard() {
     const membersIndex = members[i];
         console.log(membersIndex);
     const name = membersIndex.name;
-    let points = membersIndex.points;
+    var points = membersIndex.points;
         
         let html = `
         <div class="lboard_mem">
