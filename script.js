@@ -28,9 +28,15 @@ function renderLeaderboard() {
 <div class="pointsdropdown">
   <button onclick="changeClass()" class="dropbtn">${points} points</button>
   <div id="myDropdown" class="dropdown-content">
-    <button>+5 points</button>
-    <button>+4 points</button>
-    <button>+3 points</button>
+    <button onclick="
+    addPoints(5);
+    ">+5 points</button>
+    <button onclick="
+    addPoints(4);
+    ">+4 points</button>
+    <button onclick="
+    addPoints(3);
+    ">+3 points</button>
   </div>
 </div>                                
 <button onclick="
