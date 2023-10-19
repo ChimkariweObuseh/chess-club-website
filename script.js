@@ -28,10 +28,10 @@ function renderLeaderboard() {
                             <div class="points dropdown">
                                 ${points} points
                                 <div class="dropdown-content">
-                                <button onclick="
+                                <p onclick="
                                 points += 5;
                                 renderLeaderboard();
-                                "> Defeated Weekly Chess Bot (+5)</button>
+                                "> Defeated Weekly Chess Bot (+5)</p>
                                 </div>
                                 <button onclick="
                                 members.splice(${i}, 1);
