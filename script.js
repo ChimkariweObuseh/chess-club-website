@@ -11,9 +11,10 @@ renderLeaderboard();
 
 function renderLeaderboard() {
     let todoListHTML = '';
-    for (let i = 0; i <= members.length; i++) {
+    for (let i = 0; i < members.length; i++) {
     const membersIndex = members[i];
     const name = membersIndex.name;
+        console.log(name);
     const points = membersIndex.points;
         
         let html = `
