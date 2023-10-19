@@ -29,6 +29,7 @@ function renderLeaderboard() {
                                 ${points} points
                                 <button onclick="
                                 members.splice(${i}, 1);
+                                todoListHTML -= html;
                                 addMember();
                                 ">
                                 DELETE
