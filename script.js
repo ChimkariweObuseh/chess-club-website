@@ -84,5 +84,4 @@ window.onclick = function(event) {
     }
   }
 }
-    renderLeaderboard();
 }
