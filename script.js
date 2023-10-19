@@ -25,7 +25,9 @@ function renderLeaderboard() {
                                     <div class="inner_bar" style="width: ${(points / 56) * 100}%"></div>
                                 </div>
                             </div>
-                            <div class="points dropdown">
+                            <div id="plswork" class="points nodropdown" onclick="
+                            changeClass();
+                            ">
                                 ${points} points
                                 <div class="dropdown-content">
                                 <p onclick="
@@ -67,4 +69,13 @@ function addMember() {
 function addPoints(num) {
     points += num;
     renderLeaderboard();
+}
+
+function changeClass() {
+    let element = document.querySelector("#plswork");
+    if (element.classList.contains('nodropdown')) {
+    element.classList.replace("nodropdown", "dropdown");
+    } else {
+        element.classList.replace("dropdown", "nodropdown");
+    }
 }
