@@ -16,8 +16,7 @@ function renderLeaderboard() {
         console.log(membersIndex);
     const name = membersIndex.name;
     let points = membersIndex.points;
-        
-        let html = `
+    let html = `
         <div class="lboard_mem">
                             <div class="name_bar">
                                 <p><span>${i + 1}. </span>${name}</p>
@@ -68,7 +67,6 @@ function addMember() {
     inputElement.value = '';
     pointsInputElement.value = '';
     renderLeaderboard();
-
 }
 
 function addPoints(num) {
@@ -76,10 +74,12 @@ function addPoints(num) {
         const membersIndex2 = members[i];
         let points2 = membersIndex2.points;
         let points2AsNumber = Number(points2);
-        Number(points2AsNumber) += num;
+        console.log(points2AsNumber);
+        points2AsNumber += num;
         renderLeaderboard();
 }
 }
+
 function changeClass() {
 document.getElementById("myDropdown").classList.toggle("show");
 // Close the dropdown menu if the user clicks outside of it
