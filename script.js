@@ -74,7 +74,8 @@ function addMember() {
 function addPoints(num) {
     for (let i = 0; i < members.length; i++) {
         const membersIndex2 = members[i];
-        Number(membersIndex2.points += num);
+        let points2 = membersIndex2.points;
+        Number(points2) += num;
         renderLeaderboard();
 }
 }
