@@ -50,7 +50,7 @@ function renderLeaderboard() {
         todoListHTML += html;
         members.sort(function (x, y) {
     return y.points - x.points;
-            consol.table(members);
+            console.table(members);
 });
     }
         document.querySelector('.js-div').innerHTML = todoListHTML;
