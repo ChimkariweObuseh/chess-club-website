@@ -48,9 +48,12 @@ function renderLeaderboard() {
 </div>
         `;
         todoListHTML += html;
+        members.sort(function (x, y) {
+    return y.points - x.points;
+            consol.table(members);
+});
     }
         document.querySelector('.js-div').innerHTML = todoListHTML;
-        console.log(todoListHTML);
     }
 
     
@@ -71,12 +74,7 @@ function addMember() {
 
 function addPoints(num) {
     for (let i = 0; i < members.length; i++) {
-        const membersIndex2 = members[i];
-        let points2 = membersIndex2.points;
-        let points2AsNumber = Number(points2);
-        console.log(points2AsNumber);
-        points2AsNumber += num;
-        renderLeaderboard();
+        
 }
 }
 
