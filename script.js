@@ -13,7 +13,7 @@ function renderLeaderboard() {
     let todoListHTML = '';
     for (let i = 0; i < members.length; i++) {
     const membersIndex = members[i];
-        console.log(membersIndex);
+        console.log(members);
     const name = membersIndex.name;
     let points = membersIndex.points;
     let html = `
@@ -50,7 +50,7 @@ function renderLeaderboard() {
         todoListHTML += html;
         members.sort(function (x, y) {
     return y.points - x.points;
-            console.table(members);
+            console.table(membersIndex);
 });
     }
         document.querySelector('.js-div').innerHTML = todoListHTML;
